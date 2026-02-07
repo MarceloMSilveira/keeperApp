@@ -1,13 +1,8 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.render(<App />, document.getElementById("root"));
 
 //CHALLENGE:
 //1. Implement the add note functionality.
@@ -23,3 +18,9 @@ createRoot(document.getElementById('root')).render(
 
 //This is the end result you're aiming for:
 //https://pogqj.csb.app/
+
+// If you're running this locally in VS Code use the commands:
+// npm install
+// to install the node modules and
+// npm run dev
+// to launch your react project in your browser
