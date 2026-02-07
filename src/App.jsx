@@ -2,17 +2,18 @@ import './app.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Note from './components/Note'
-import notes from './notes'
+import CreateArea from './components/CreateArea'
 
 function App() {
   
 
   return (
-    <>
+    <div>
       <Header />
-      {notes.map(note => <Note key={note.key} title={note.title} content={note.content}/>)}
+      <CreateArea />
+      <Note key={1} title="Note title" content="Note content" />
       <Footer />
-    </>
+    </div>
   )
 }
 
