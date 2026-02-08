@@ -9,17 +9,18 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-//CHALLENGE:
-//1. Implement the add note functionality.
-//- Create a constant that keeps track of the title and content.
-//- Pass the new note back to the App.
-//- Add new note to an array.
-//- Take array and render seperate Note components for each item.
+// CreateArea.jsx
 
-//2. Implement the delete note functionality.
-//- Callback from the Note component to trigger a delete function.
-//- Use the filter function to filter out the item that needs deletion.
-//- Pass a id over to the Note component, pass it back to the App when deleting.
+// import AddIcon from "@mui/icons-material/Add";
+// import { Fab } from "@mui/material";
+// import { Zoom } from "@mui/material";
 
-//This is the end result you're aiming for:
-//https://pogqj.csb.app/
+
+// Header.jsx
+
+// import HighlightIcon from "@mui/icons-material/Highlight";
+
+
+// Note.jsx
+
+// import DeleteIcon from "@mui/icons-material/Delete";
