@@ -3,27 +3,29 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Note from './components/Note'
 import CreateArea from './components/CreateArea'
-//import { useState } from 'react'
+import { useState } from 'react'
 import notas from './assets/notas'
 function App() {
 
-  // let [notes, setNotes] = useState ([])
+  let [notes, setNotes] = useState (notas)
   
-  // function addNoteToList(title, content) {
-    
-  // }
+  function addNote(novaNota) {
+    console.log(novaNota.title)
+    console.log(novaNota.content)
+    setNotes([...notes,novaNota])
+  }
 
-  function mostrarNota(nota) {
-    console.log(nota.title)
-    console.log(nota.content)
+  function delNote(noteId) {
+    console.log(`Id da nota: ${noteId}`)
+    setNotes(notes.filter((nota, index)=> index != noteId))  
   }
 
 
   return (
     <div>
       <Header />
-      <CreateArea showNote={mostrarNota}/>
-      {notas.map(nota => <Note key={nota.id} id={nota.id} title={nota.title} content={nota.content}/>)}
+      <CreateArea sendNoteToApp={addNote}/>
+      {notes.map((nota,index) => <Note key={index} id={index} title={nota.title} content={nota.content} deleteFunction={delNote} />)}
       <Footer />
     </div>
   )

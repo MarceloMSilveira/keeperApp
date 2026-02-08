@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CreateArea({showNote}) {
+function CreateArea({sendNoteToApp}) {
   let [note, setNote] = useState({
     title: '',
     content: ''
@@ -8,8 +8,11 @@ function CreateArea({showNote}) {
   
   function addFunction(evt) {
     evt.preventDefault()
-    //console.log(`titulo: ${note.title} e conteudo: ${note.content}`)
-    showNote(note)
+    sendNoteToApp(note)
+    setNote({
+      title: '',
+      content: ''
+    })
   }
 
   return (
