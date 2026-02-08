@@ -10,13 +10,13 @@ function App() {
   let [notes, setNotes] = useState (notas)
   
   function addNote(novaNota) {
-    console.log(novaNota.title)
-    console.log(novaNota.content)
+    // console.log(novaNota.title)
+    // console.log(novaNota.content)
     setNotes([...notes,novaNota])
   }
 
   function delNote(noteId) {
-    console.log(`Id da nota: ${noteId}`)
+    //console.log(`Id da nota: ${noteId}`)
     setNotes(notes.filter((nota, index)=> index != noteId))  
   }
 
