@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import Note from './components/Note'
 import CreateArea from './components/CreateArea'
 //import { useState } from 'react'
-
+import notas from './assets/notas'
 function App() {
 
   // let [notes, setNotes] = useState ([])
@@ -23,7 +23,7 @@ function App() {
     <div>
       <Header />
       <CreateArea showNote={mostrarNota}/>
-      <Note key={1} title="Note title" content="Note content" />
+      {notas.map(nota => <Note key={nota.id} id={nota.id} title={nota.title} content={nota.content}/>)}
       <Footer />
     </div>
   )
